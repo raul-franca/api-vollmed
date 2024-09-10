@@ -9,3 +9,6 @@ You get an error message because your app no longer has any web dynos available 
 
 Scale it up again:
 heroku ps:scale web=1
+
+heroku config:get DATABASE_URL -> to get the database URL
+
