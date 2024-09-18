@@ -31,3 +31,23 @@ public record DadosCadastroMedico(String nome, String email, String telefone, St
 Documentação: https://docs.oracle.com/en/java/javase/16/language/records.html     
 
 
+O padrão de repositório incentiva um design orientado a domínio,
+fornecendo uma compreensão mais fácil do domínio e da estrutura de dados.
+Além disso, utilizando o repository do Spring não temos que nos preocupar
+em utilizar diretamente a API da JPA, 
+bastando apenas criar os métodos que o Spring cria a implementação em tempo de execução,
+deixando o código muito mais simples, menor e legível.
+
+
+Exemplo de Repository:
+
+```java
+
+    public interface MedicoRepository extends JpaRepository<Medico, Long> {
+
+        List<Medico> findByNome(String nome);
+
+        List<Medico> findByEspecialidade(Especialidade especialidade);
+    }
+```
+Documentação: https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.core-concepts
