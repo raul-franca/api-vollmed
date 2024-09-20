@@ -1,14 +1,19 @@
-Horizontal scaling an application on Heroku is equivalent to changing 
-the number of running dynos.
+git push heroku main
+heroku open
+heroku config:set DATABASE_URL=your_database_url
+heroku config:set DATABASE_PASSWORD=your_password
+heroku config:set DATABASE_USER=your_user
+heroku config:set DATABASE_NAME=your_database_name
+heroku config:set DATABASE_HOST=your_database_host
+heroku config:set DATABASE_PORT=your_database_port
+heroku config:set DATABASE_SSLMODE=REQUIRED
 
-Scale the number of web dynos to zero:
-heroku ps:scale web=0
 
-Access the app again by refreshing your browser or running heroku open. 
-You get an error message because your app no longer has any web dynos available to serve requests.
 
-Scale it up again:
-heroku ps:scale web=1
-
-heroku config:get DATABASE_URL -> to get the database URL
-
+DATABASE_URL=mysql://doadmin:AVNS_JNlNiHtI3ouE9pFFNsG@db-vollmed-do-user-17817977-0.k.db.ondigitalocean.com:25060/defaultdb?sslMode=REQUIRED
+heroku config:set DATABASE_HOST=db-vollmed-do-user-17817977-0.k.db.ondigitalocean.com
+heroku config:set DATABASE_PORT=25060
+heroku config:set DATABASE_NAME=defaultdb
+heroku config:set DATABASE_USER=doadmin
+heroku config:set DATABASE_PASSWORD=AVNS_JNlNiHtI3ouE9pFFNsG
+heroku config:set DATABASE_SSLMODE=REQUIRED
