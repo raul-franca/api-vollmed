@@ -76,12 +76,12 @@
           <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <!-- Biblioteca dotenv para carregar variáveis de ambiente -->
-        <dependency>
-            <groupId>io.github.cdimascio</groupId>
-            <artifactId>dotenv-java</artifactId>
-            <version>2.2.0</version>
-        </dependency>
+<!--        &lt;!&ndash; Biblioteca dotenv para carregar variáveis de ambiente &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.github.cdimascio</groupId>-->
+<!--            <artifactId>dotenv-java</artifactId>-->
+<!--            <version>2.2.0</version>-->
+<!--        </dependency>-->
 
         <!-- Dependências para testes -->
         <dependency>
