@@ -1,4 +1,4 @@
-Primeiro paradão de projeto é o DTO, que é a abreviação de Data Transfer Object.
+Paradão de projeto é o DTO, que é a abreviação de Data Transfer Object.
 Ele é uma classe cujo objetivo é transferir dados entre o cliente e o servidor.
 O DTO é uma classe simples, que contém apenas atributos e métodos accessors.
 Ele é utilizado para evitar que a entidade seja exposta diretamente para o cliente,
@@ -31,8 +31,11 @@ public record DadosCadastroMedico(String nome, String email, String telefone, St
 Documentação: https://docs.oracle.com/en/java/javase/16/language/records.html     
 
 
-O padrão de repositório incentiva um design orientado a domínio,
-fornecendo uma compreensão mais fácil do domínio e da estrutura de dados.
+Padrão Repository: 
+O repositório é um mecanismo para encapsular armazenamento, 
+recuperação e comportamento de pesquisa, que emula uma coleção de objetos.
+
+Incentiva um design orientado a domínio, fornecendo uma compreensão mais fácil do domínio e da estrutura de dados.
 Além disso, utilizando o repository do Spring não temos que nos preocupar
 em utilizar diretamente a API da JPA, 
 bastando apenas criar os métodos que o Spring cria a implementação em tempo de execução,
