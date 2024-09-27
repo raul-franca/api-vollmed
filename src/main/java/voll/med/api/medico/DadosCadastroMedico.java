@@ -1,24 +1,34 @@
 package voll.med.api.medico;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import voll.med.api.endereco.DadosEndereco;
 
-public record DadosCadastroMedico(String nome, String email, String telefone, String crm, Especialidade especialidade, DadosEndereco endereco) {
+public record DadosCadastroMedico(
+
+        @NotBlank
+        String nome,
+
+        @NotBlank
+        @Email
+        String email,
+
+        String telefone,
+
+        @NotBlank
+        @Pattern(regexp = "^\\d{4,6}$", message = "O valor deve ter entre 4 e 6 dígitos.")
+        String crm,
+
+        @NotNull
+        Especialidade especialidade,
+
+        @NotNull
+        @Valid
+        DadosEndereco endereco
+
+    ) {
 
 }
-
-
-
-//
-// "nome": "Luiz de França",
-//         "email": "Luiz.franca@vollmed.com",
-//    "telefone": "112233",
-//    "crm": "101010",
-//    "especialidade": "CARDIOLOGIA",
-//    "endereco": {
-//        "logradouro": "av. Bernardo Viera de mello",
-//        "bairro": "candeis",
-//        "cep": "12345678",
-//        "numero": "1",
-//        "complemento": "casa",
-//        "cidade": "Recife",
-//        "uf": "PE"
