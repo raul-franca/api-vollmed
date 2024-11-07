@@ -1,0 +1,38 @@
+
+### GET Pacientes
+GET localhost:8080/pacientes
+
+### POST Cadastrar Paciente
+POST localhost:8080/pacientes
+Content-Type: application/json
+
+{
+	"nome": "Aurora S. Fonseca França",
+	"telefone": "8199912345",
+	"cpf": "10203040506",
+	"email": "aurora.franca@email.com",
+	"endereco": {
+		"logradouro": "av. Bernado Vieira Melo",
+		"bairro": "Candeias",
+		"cep": "54444000",
+		"numero": "1",
+		"complemento": "Apartamento",
+		"cidade": "Recife",
+		"uf": "PE"
+	}
+}
+
+### PUT Atualizar Paciente
+PUT localhost:8080/pacientes
+content-Type: application/json
+
+{
+        "id": 1,
+        "nome": "Aurora S. Fonseca França",
+        "endereco": {
+             "numero": "2002"
+        }
+}
+
+### DELETE Deletar Paciente
+DELETE localhost:8080/pacientes/1
