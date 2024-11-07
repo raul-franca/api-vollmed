@@ -10,8 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import voll.med.api.medico.*;
 
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("medicos")
