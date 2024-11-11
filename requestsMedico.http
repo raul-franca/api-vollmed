@@ -1,9 +1,9 @@
 ### GET Listagem medicos
-GET http://localhost:8080/medicos
+GET pacientes//https://api-vollmed-8f1315f3dab6.herokuapp.com/medicos
 Accept: application/json
 
 ### POST cadastrar medico
-POST http://localhost:8080/medicos
+POST https://api-vollmed-8f1315f3dab6.herokuapp.com/medicos
 Content-Type: application/json
 
 {
@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ### PUT atualizar medico
-PUT  http://localhost:8080/medicos
+PUT  https://api-vollmed-8f1315f3dab6.herokuapp.com/medicos
 Content-Type: application/json
 
 {
@@ -35,4 +35,4 @@ Content-Type: application/json
 }
 
 ### DELETE deletar medico
-DELETE http://localhost:8080/medicos/1
+DELETE https://api-vollmed-8f1315f3dab6.herokuapp.com/medicos/1

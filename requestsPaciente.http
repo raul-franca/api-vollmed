@@ -1,9 +1,9 @@
 
 ### GET Pacientes
-GET localhost:8080/pacientes
+GET https://api-vollmed-8f1315f3dab6.herokuapp.com/pacientes
 
 ### POST Cadastrar Paciente
-POST localhost:8080/pacientes
+POST https://api-vollmed-8f1315f3dab6.herokuapp.com/pacientes
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### PUT Atualizar Paciente
-PUT localhost:8080/pacientes
+PUT https://api-vollmed-8f1315f3dab6.herokuapp.com/pacientes
 content-Type: application/json
 
 {
@@ -35,4 +35,4 @@ content-Type: application/json
 }
 
 ### DELETE Deletar Paciente
-DELETE localhost:8080/pacientes/1
+DELETE https://api-vollmed-8f1315f3dab6.herokuapp.com/pacientes/1
