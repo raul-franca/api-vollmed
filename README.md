@@ -1,9 +1,26 @@
-# Projeto API Voll Med
+# 💻 Sobre o projeto
+
 
 ## Descrição
 
-Este é um projeto de estudo de uma API REST full desenvolvida em Java utilizando o Spring Boot e MySQL.
-O objetivo é aplicar conceitos de desenvolvimento backend e boas práticas de documentação.
+A **Voll.med API** é um projeto de estudo que implementa uma API RESTful, desenvolvida seguindo o padrão de projeto **Domain-Driven Design (DDD)**. Construída em **Java** com **Spring Boot** e **MySQL**, esta API tem como objetivo gerenciar informações de médicos, pacientes e outros dados relacionados, aplicando boas práticas de programação e arquitetura de software.
+
+## 🎨 Layout
+
+Confira o layout do projeto no Figma:
+[Voll.med - Figma](https://www.figma.com/design/N4CgpJqsg7gjbKuDmra3EV/Voll.med?node-id=2-1007&node-type=CANVAS&t=2ko1JKSw2ArBwwiy-0)
+
+## 📄 Documentação da API
+
+A documentação detalhada da API está disponível no Trello:
+[API Voll.med - Trello](https://trello.com/b/RaKecnMc/api-voll-med)
+
+## ✨ Funcionalidades
+
+- Cadastro de médicos e pacientes.
+- Atualização e exclusão de registros.
+- Consulta de médicos e pacientes.
+- Gerenciamento de agendamentos (futuro).
 
 ## Implantação
 
@@ -11,7 +28,7 @@ A aplicação está hospedada no **Heroku** e o banco de dados MySQL estão na *
 
 ### Heroku
 
-O Heroku é utilizado para hospedar a aplicação. Os arquivos `Procfile` e `system.properties` 
+O Heroku é utilizado para hospedar o deploy da aplicação. Os arquivos `Procfile` e `system.properties` 
 estão configurados para facilitar a implantação.
 
 
@@ -21,17 +38,20 @@ O código-fonte e o banco de dados MySQL estão hospedados na DigitalOcean,
 garantindo um ambiente de produção confiável e escalável.
 
 
-## Índice
+# 🛠 Tecnologias
+* Java 17
+* Spring Boot 3   
+* MySQL   
+* JPA
+* Flyway
+* Hibernate
+* Maven
+* Lombok
+* Swagger
+* Heroku
+* DigitalOcean
 
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação e Configuração](#instalação-e-configuração)
-- [Como Executar](#como-executar)
-- [Uso](#uso)
-- [Documentação Adicional](#documentação-adicional)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Contato](#contato)
+### 📫 Contato
 
-## Estrutura do Projeto
+*   Raul Michel de França
+*	Email: raulmfranca@gmail.com
