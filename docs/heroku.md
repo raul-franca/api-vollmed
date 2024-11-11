@@ -9,15 +9,21 @@ heroku login
 
 ## Criar um app no heroku
 heroku create // cria um app no heroku
-heroku git:remote -a nome_do_app
+heroku git:remote -a nome_do_app // cria um remote no git
 git remote -v // mostra os remotes
+heroku info // mostra informações do app
+heroku apps:destroy nome-do-seu-app --confirm nome-do-seu-app // deleta o app
 
 ## Deploy no heroku
-git push heroku main
-heroku open
+git push heroku main // faz o deploy no heroku    
+heroku open // abre o app no navegador
+heroku restart // reinicia a aplicação
 
 ## Visualizar logs
-heroku logs --tail
+heroku logs --tail // visualiza os logs
+heroku logs --tail | grep ERROR // visualiza os logs de erro
+
+
 
 ## Configurar variáveis de ambiente no heroku
 heroku config:set DATABASE_URL=your_database_url
