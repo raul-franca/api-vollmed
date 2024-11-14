@@ -3,6 +3,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### MacOS ###
+.DS_Store
+
 ### STS ###
 .apt_generated
 .classpath
@@ -17,7 +20,8 @@ target/
 *.iws
 *.iml
 *.ipr
-.DS_Store
+
+
 
 ### NetBeans ###
 /nbproject/private/
