@@ -1,36 +1,61 @@
-# Comandos que eu mais usei no Heroku
 
-O deploy da aplicação foi feito no Heroku. 
-Os comandos abaixo são os que eu mais usei para fazer o deploy e configurar o ambiente.
+# Comandos mais usados no Heroku
 
-## Instalar o heroku e logar
-brew tap heroku/brew && brew install heroku
-heroku login
+O deploy da aplicação foi feito no Heroku. Os comandos abaixo foram os mais utilizados para realizar o deploy e configurar o ambiente.
 
-## Criar um app no heroku
-heroku create // cria um app no heroku
-heroku git:remote -a nome_do_app // cria um remote no git
-git remote -v // mostra os remotes
-heroku info // mostra informações do app
-heroku apps:destroy nome-do-seu-app --confirm nome-do-seu-app // deleta o app
+## Instalar o Heroku e realizar login
+```bash
+brew tap heroku/brew && brew install heroku   # Instala o Heroku CLI via Homebrew
+heroku login                                  # Realiza o login na sua conta Heroku
+```
 
-## Deploy no heroku
-git push heroku main // faz o deploy no heroku    
-heroku open // abre o app no navegador
-heroku restart // reinicia a aplicação
+## Criar um aplicativo no Heroku
+```bash
+heroku create                                 # Cria um novo app no Heroku
+heroku git:remote -a nome_do_app              # Configura um remote para o Git vinculado ao app
+git remote -v                                 # Mostra os remotes do Git configurados
+heroku info                                   # Exibe informações sobre o aplicativo no Heroku
+heroku apps:destroy nome_do_app --confirm nome_do_app  # Deleta o app no Heroku
+```
 
-## Visualizar logs
-heroku logs --tail // visualiza os logs
-heroku logs --tail | grep ERROR // visualiza os logs de erro
+## Deploy da aplicação no Heroku
+```bash
+git push heroku main                          # Realiza o deploy da branch 'main' no Heroku
+heroku open                                   # Abre o aplicativo no navegador
+heroku restart                                # Reinicia a aplicação no Heroku
+```
+
+## Visualizar logs da aplicação
+```bash
+heroku logs --tail                            # Exibe os logs da aplicação em tempo real
+heroku logs --tail | grep ERROR               # Filtra e exibe apenas os logs de erro
+```
+
+## Configurar variáveis de ambiente no Heroku
+```bash
+heroku config:set DATABASE_URL=your_database_url        # Configura a URL do banco de dados
+heroku config:set DATABASE_PASSWORD=your_password       # Define a senha do banco de dados
+heroku config:set DATABASE_USER=your_user               # Define o usuário do banco de dados
+heroku config:set DATABASE_NAME=your_database_name      # Define o nome do banco de dados
+heroku config:set DATABASE_HOST=your_database_host      # Define o host do banco de dados
+heroku config:set DATABASE_PORT=your_database_port      # Define a porta do banco de dados
+heroku config:set DATABASE_SSLMODE=REQUIRED             # Configura SSL para conexão segura
+```
+
+---""
 
 
+# Tabela com os comandos mais usados no Heroku
 
-## Configurar variáveis de ambiente no heroku
-heroku config:set DATABASE_URL=your_database_url
-heroku config:set DATABASE_PASSWORD=your_password
-heroku config:set DATABASE_USER=your_user
-heroku config:set DATABASE_NAME=your_database_name
-heroku config:set DATABASE_HOST=your_database_host
-heroku config:set DATABASE_PORT=your_database_port
-heroku config:set DATABASE_SSLMODE=REQUIRED
-
+| Comando                     | Descrição                                                                 |
+|-----------------------------|---------------------------------------------------------------------------|
+| `heroku login`              | Efetua login na sua conta Heroku.                                         |
+| `heroku create`             | Cria uma nova aplicação no Heroku.                                        |
+| `git push heroku main`      | Faz o deploy do código da branch `main` para o Heroku.                    |
+| `heroku ps:scale web=1`     | Escala o número de dynos web para 1.                                      |
+| `heroku open`               | Abre a aplicação no navegador padrão.                                     |
+| `heroku logs --tail`        | Exibe os logs em tempo real da aplicação.                                 |
+| `heroku config:set VAR=val` | Define uma variável de ambiente `VAR` com o valor `val`.                  |
+| `heroku config`             | Lista todas as variáveis de ambiente da aplicação.                        |
+| `heroku addons:create`      | Adiciona um add-on à aplicação.                                           |
+| `heroku run COMMAND`        | Executa o comando especificado no ambiente da aplicação no Heroku.        |
