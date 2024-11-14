@@ -42,7 +42,7 @@ heroku config:set DATABASE_PORT=your_database_port      # Define a porta do banc
 heroku config:set DATABASE_SSLMODE=REQUIRED             # Configura SSL para conexão segura
 ```
 
----""
+---
 
 
 # Tabela com os comandos mais usados no Heroku
