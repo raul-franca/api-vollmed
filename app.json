@@ -1,5 +1,6 @@
 {
-  "name": "Start on Heroku: Java",
-  "description": "A barebones Java app, which can easily be deployed to Heroku.",
-  "addons": ["heroku-postgresql"]
+  "name": "API Vol Med",
+  "description": "Voll.med é uma clínica médica fictícia que foi desenvolvimento da API Rest para meus estudos em Java com Spring Boot."
+
 }
+
