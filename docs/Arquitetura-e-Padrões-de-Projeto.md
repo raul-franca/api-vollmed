@@ -49,16 +49,17 @@ Utilizamos **Records** do Java para criar DTOs de forma concisa e imutável.
 Definição do DTO `DadosCadastroMedico`:
 
 ```java
-import voll.med.api.endereco.DadosEndereco;
+import voll.med.api.domain.endereco.DadosEndereco;
 
 public record DadosCadastroMedico(
-    String nome,
-    String email,
-    String telefone,
-    String crm,
-    Especialidade especialidade,
-    DadosEndereco endereco
-) {}
+        String nome,
+        String email,
+        String telefone,
+        String crm,
+        Especialidade especialidade,
+        DadosEndereco endereco
+) {
+}
 ```
 Uso no controlador:
     

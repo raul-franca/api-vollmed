@@ -1,7 +1,8 @@
 # Anotações de Controller
 
 - **`@RestController`**  
-  Indica que a classe é um controller REST, combinando as anotações `@Controller` e `@ResponseBody`. Os métodos nesta classe retornam dados diretamente no corpo da resposta HTTP.
+  Indica que a classe é um controller REST, combinando as anotações `@Controller` e `@ResponseBody`. 
+Os métodos nesta classe retornam dados diretamente no corpo da resposta HTTP.
 
 # Mapeamento de Requisições
 
@@ -58,11 +59,20 @@ específicas de persistência.
 - **`@Autowired`**  
   Permite que o Spring resolva e injete colaborador ou dependências em nosso bean.
 
+# Anotações de Tratamento de Exceções
+-**`@RestControllerAdvice`**
+Permite que uma classe seja usada para tratar exceções em todos os controllers.
+
+-**`@ExceptionHandler`**  
+Permite que um método seja invocado para tratar exceções específicas.
+
+---
+
 # Controle de Transações
 
 - **`@Transactional`**  
   Indica que o método ou classe deve ser executado dentro de uma transação.
-
+ 
 # Classes do Spring Framework
 
 ## `ResponseEntity`
