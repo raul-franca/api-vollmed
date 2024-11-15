@@ -1,4 +1,4 @@
-package voll.med.api.paciente;
+package voll.med.api.domain.paciente;
 
 //dados para a listagem de pacientes
 //        nome, email, cpf
