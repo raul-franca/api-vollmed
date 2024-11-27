@@ -6,10 +6,10 @@ package voll.med.api.domain.paciente;
 //        de maneira crescente, bem como ser paginada, trazendo 10 registros por página.
 
 //classe record para mapear os dados do paciente para a listagem
-public record DadosListagemPaciente(String nome, String email, String cpf) {
+public record DadosListagemPaciente(String nome, String email, String telefone, String cpf) {
 
         //construtor para mapear os dados do paciente para a listagem
         public DadosListagemPaciente(Paciente paciente) {
-            this(paciente.getNome(), paciente.getEmail(), paciente.getCpf());
+            this(paciente.getNome(), paciente.getEmail(), paciente.getTelefone(), paciente.getCpf());
         }
 }
