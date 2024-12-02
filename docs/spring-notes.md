@@ -28,7 +28,8 @@ Os métodos nesta classe retornam dados diretamente no corpo da resposta HTTP.
   Mapeia requisições HTTP DELETE para o método.
 
 - **`@Valid`**  
-  Define que o objeto passado como parâmetro será validado automaticamente com base nas anotações de validação presentes na classe (como `@NotNull`, `@Size`, entre outras).
+  Define que o objeto passado como parâmetro será validado automaticamente com base nas anotações de validação presentes na classe 
+- (como `@NotNull`, `@Size`, entre outras).
 
 # Anotações de Persistência
 
@@ -58,6 +59,12 @@ específicas de persistência.
 
 - **`@Autowired`**  
   Permite que o Spring resolva e injete colaborador ou dependências em nosso bean.
+
+- **`@Service`**
+    Indica que a classe é um serviço, que contém a lógica de negócios da aplicação.  
+
+- **`@Component`**
+    Indica que a classe é um componente genérico do Spring.
 
 # Anotações de Tratamento de Exceções
 -**`@RestControllerAdvice`**

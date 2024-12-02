@@ -10,6 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import voll.med.api.domain.medico.*;
+import voll.med.api.domain.medico.dto.DadosAtualizarMedico;
+import voll.med.api.domain.medico.dto.DadosCadastroMedico;
+import voll.med.api.domain.medico.dto.DadosDetalhesMedico;
+import voll.med.api.domain.medico.dto.DadosListagemMedico;
 
 // Anotação para indicar que esta classe é um controlador REST
 @RestController

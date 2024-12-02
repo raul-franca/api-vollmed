@@ -1,9 +1,11 @@
-package voll.med.api.domain.paciente;
+package voll.med.api.domain.paciente.dto;
 
 //dados para a listagem de pacientes
 //        nome, email, cpf
 //        A listagem deve ser ordenada pelo nome do paciente,
 //        de maneira crescente, bem como ser paginada, trazendo 10 registros por página.
+
+import voll.med.api.domain.paciente.Paciente;
 
 //classe record para mapear os dados do paciente para a listagem
 public record DadosListagemPaciente(Long id, String nome, String email, String telefone, String cpf) {

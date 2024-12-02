@@ -11,6 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import voll.med.api.domain.paciente.*;
+import voll.med.api.domain.paciente.dto.DadosAtualizarPaciente;
+import voll.med.api.domain.paciente.dto.DadosCadastroPaciente;
+import voll.med.api.domain.paciente.dto.DadosDetalhadoPaciente;
+import voll.med.api.domain.paciente.dto.DadosListagemPaciente;
 
 
 @RestController
