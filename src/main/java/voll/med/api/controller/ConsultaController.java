@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -45,6 +46,12 @@ public class ConsultaController {
     }
 
 
+    @GetMapping("/{data}")
+    public ResponseEntity<Page<DadosListagemConsulta>> listarConsultasPorData(@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime data, @PageableDefault( sort = {"data"}) Pageable paginacao) {
+        System.out.printf("Listando consultas para a data %s\n", data);
+        var consultas = consultaRepository.findAllByData(data, paginacao).map(DadosListagemConsulta::new);
+        return ResponseEntity.ok(consultas);
+    }
 
 
     @DeleteMapping("{id}")

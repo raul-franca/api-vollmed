@@ -4,6 +4,7 @@ package voll.med.api.domain.consulta;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.time.LocalDateTime;
 
@@ -33,6 +34,22 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
     boolean existsByPacienteIdAndDataBetween(Long idPaciente, LocalDateTime primeiroHorario, LocalDateTime ultimoHorario);
 
     /**
+     * Busca todas as consultas agendadas para uma determinada data.
+     *
+     * @param data      a data das consultas
+     * @param paginacao informações sobre a paginação
+     * @return uma página com as consultas agendadas para a data especificada
+     */
+     @Query("""
+            SELECT c
+            FROM Consulta c
+            WHERE c.data >= :data
+            ORDER BY c.data
+    """)
+    Page<Consulta> findAllByData(LocalDateTime data, Pageable paginacao);
+
+
+     /**
      * Recupera uma página de consultas cuja data seja posterior à data fornecida.
      *
      * @param data       a data de referência
@@ -40,5 +57,6 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
      * @return uma página de consultas
      */
     Page<Consulta> findAllByDataGreaterThan(LocalDateTime data, Pageable paginacao);
+
 
 }
