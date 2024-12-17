@@ -6,12 +6,22 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import voll.med.api.domain.ValidacaoException;
 
 import java.util.List;
 
 // Anotação que indica que esta classe fornecerá tratamento global de exceções para controladores REST
 @RestControllerAdvice
 public class TratadorDeErros {
+
+    // Novo handler para ValidacaoException
+    @ExceptionHandler(ValidacaoException.class)
+    public ResponseEntity<DadosErro> tratarErroValidacao(ValidacaoException ex) {
+        var dadosErro = new DadosErro(ex.getMessage());
+        // Retorna 400 (Bad Request) com um JSON contendo a mensagem do erro
+        return ResponseEntity.badRequest().body(dadosErro);
+    }
+
 
     // Metodo que trata exceções do tipo EntityNotFoundException
     @ExceptionHandler(EntityNotFoundException.class)
@@ -37,4 +47,5 @@ public class TratadorDeErros {
         }
     }
 
+    private record DadosErro(String mensagem) {}
 }
