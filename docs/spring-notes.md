@@ -1,3 +1,6 @@
+
+
+
 # Anotações de Controller
 
 - **`@RestController`**  
@@ -73,6 +76,23 @@ Permite que uma classe seja usada para tratar exceções em todos os controllers
 -**`@ExceptionHandler`**  
 Permite que um método seja invocado para tratar exceções específicas.
 
+# Anotações de Configuração
+
+-**`@Configuration`**
+Indica que a classe é uma classe de configuração do Spring.
+
+-**`@Bean`**
+Indica que um método produz um bean gerenciado pelo Spring, 
+bean é um objeto que é instanciado, montado e gerenciado pelo contêiner do Spring.
+
+
+# Anotações de Teste
+
+-**`@DataJpaTest`**
+Anotação que configura o ambiente de teste para testes de repositório JPA.
+
+-**`@Test`**
+Indica que um método é um método de teste.
 ---
 
 # Controle de Transações
