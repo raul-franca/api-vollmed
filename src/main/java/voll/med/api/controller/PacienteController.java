@@ -19,6 +19,9 @@ import voll.med.api.domain.paciente.dto.DadosListagemPaciente;
 
 @RestController
 @RequestMapping("pacientes")
+@CrossOrigin(origins = {
+        "http://localhost:3000"
+    })
 public class PacienteController {
 
 

@@ -19,6 +19,9 @@ import voll.med.api.domain.medico.dto.DadosListagemMedico;
 @RestController
 // Define o caminho base da URL para os endpoints deste controlador
 @RequestMapping("medicos")
+@CrossOrigin(origins = {
+        "http://localhost:3000"
+    })
 public class MedicoController {
 
     // Injeção de dependência do repositório MedicoRepository para acessar o banco de dados

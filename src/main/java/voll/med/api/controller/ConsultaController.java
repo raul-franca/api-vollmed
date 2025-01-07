@@ -21,6 +21,9 @@ import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("consultas")
+@CrossOrigin(origins = {
+        "http://localhost:3000"
+    })
 public class ConsultaController {
 
     @Autowired
