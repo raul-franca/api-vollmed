@@ -1,3 +1,3 @@
- alter table medicos add ativo boolean NOT NULL DEFAULT 1;
+ alter table medicos add ativo boolean NOT NULL DEFAULT TRUE;
 
 

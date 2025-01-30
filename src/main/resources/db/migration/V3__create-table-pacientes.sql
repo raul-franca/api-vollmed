@@ -1,5 +1,5 @@
 create table pacientes (
-    id serial primary key,
+    id BIGSERIAL primary key,
     nome varchar(255) not null,
     cpf varchar(11) not null,
     telefone varchar(11) not null,
