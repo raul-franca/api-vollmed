@@ -15,4 +15,12 @@ public interface PacienteRepository extends JpaRepository<Paciente, Long> {
         where p.id = :idPaciente
     """)
     boolean findAtivoById(Long idPaciente);
+
+
+    @Query("""
+        select p from Paciente p
+        where p.ativo = true
+        and lower(p.nome) like :nome%
+    """)
+    Page<Paciente> findByNomeContainingIgnoreCase(String nome, Pageable paginacao);
 }

@@ -14,6 +14,7 @@ import voll.med.api.domain.medico.dto.DadosAtualizarMedico;
 import voll.med.api.domain.medico.dto.DadosCadastroMedico;
 import voll.med.api.domain.medico.dto.DadosDetalhesMedico;
 import voll.med.api.domain.medico.dto.DadosListagemMedico;
+import voll.med.api.domain.paciente.dto.DadosListagemPaciente;
 
 // Anotação para indicar que esta classe é um controlador REST
 @RestController
@@ -68,6 +69,17 @@ public class MedicoController {
         // Retorna os dados do médico com status 200 (OK)
         return ResponseEntity.ok(new DadosDetalhesMedico(medico));
 
+    }
+    // Endpoint GET para buscar médicos por nome
+    @GetMapping("/buscar/{nome}")
+    public ResponseEntity<Page<DadosListagemMedico>> buscarMedicoPorNome(
+            @PathVariable String nome, @PageableDefault( sort = {"nome"}) Pageable paginas) {
+        System.out.print("Buscando Medico por nome\n");
+
+        var page = repository.findByNomeContainingIgnoreCase(nome, paginas)
+                .map(DadosListagemMedico::new);
+
+        return ResponseEntity.ok(page);
     }
 
 

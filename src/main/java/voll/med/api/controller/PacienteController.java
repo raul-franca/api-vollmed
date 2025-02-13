@@ -61,6 +61,17 @@ public class PacienteController {
 
     }
 
+
+    @GetMapping("/buscar/{nome}")
+    public ResponseEntity<Page<DadosListagemPaciente>> buscarPacientePorNome(
+            @PathVariable String nome, @PageableDefault( sort = {"nome"}) Pageable paginas) {
+        System.out.print("Buscando paciente por nome\n");
+
+        var page = repository.findByNomeContainingIgnoreCase(nome, paginas).map(DadosListagemPaciente::new);
+
+        return ResponseEntity.ok(page);
+    }
+
     @PutMapping
     @Transactional
     public ResponseEntity<DadosDetalhadoPaciente> atualizarPaciente(

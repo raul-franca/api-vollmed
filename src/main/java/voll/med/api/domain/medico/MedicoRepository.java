@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import voll.med.api.domain.paciente.Paciente;
 
 import java.time.LocalDateTime;
 
@@ -36,4 +37,11 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
         where m.id = :idMedico
     """)
     boolean findAtivoById(Long idMedico);
+
+    @Query("""
+        select m from Medico m
+        where m.ativo = true
+        and lower(m.nome) like :nome%
+    """)
+    Page<Medico> findByNomeContainingIgnoreCase(String nome, Pageable paginacao);
 }
